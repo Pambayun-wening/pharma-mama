@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#fdf8f4] text-slate-800 antialiased selection:bg-pink-300 selection:text-pink-900;
+    font-family: 'Fredoka', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', cursive, sans-serif;
+    @apply tracking-wide;
+  }
+}
+
+@layer utilities {
+  /* Cooking Mama bouncy cartoon buttons */
+  .btn-mama {
+    @apply relative font-bold text-center transition-all duration-150 active:translate-y-1 select-none cursor-pointer;
+  }
+
+  .btn-mama-pink {
+    @apply bg-mama-pink hover:bg-mama-pink-dark text-white rounded-2xl shadow-mama-pink active:shadow-none;
+  }
+
+  .btn-mama-yellow {
+    @apply bg-mama-yellow hover:bg-mama-yellow-dark text-slate-800 rounded-2xl shadow-mama-yellow active:shadow-none;
+  }
+
+  .btn-mama-mint {
+    @apply bg-mama-mint hover:bg-mama-mint-dark text-emerald-950 rounded-2xl shadow-mama-mint active:shadow-none;
+  }
+
+  .btn-mama-blue {
+    @apply bg-mama-blue hover:bg-mama-blue-dark text-sky-950 rounded-2xl shadow-mama-blue active:shadow-none;
+  }
+
+  .btn-mama-purple {
+    @apply bg-mama-lavender hover:bg-mama-lavender-dark text-purple-950 rounded-2xl shadow-mama-purple active:shadow-none;
+  }
+
+  .btn-mama-white {
+    @apply bg-white hover:bg-slate-50 text-slate-800 rounded-2xl shadow-mama active:shadow-none border-2 border-slate-200;
+  }
+
+  /* Pastel Card */
+  .mama-card {
+    @apply bg-white rounded-3xl border-3 border-pink-100 shadow-mama transition-all;
+  }
+
+  /* Custom subtle scrollbars */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #fdf2f4;
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #f472b6;
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #db2777;
+  }
+}
+
+/* Animations */
+@keyframes shakeHorizontal {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shakeHorizontal 0.4s ease-in-out;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  70% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop-in {
+  animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-mama-float {
+  animation: floatBob 3.5s ease-in-out infinite;
+}
+
+@keyframes sparkleSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.animate-sparkle {
+  animation: sparkleSpin 4s linear infinite;
+}

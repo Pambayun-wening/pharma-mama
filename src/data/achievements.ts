@@ -1,0 +1,68 @@
+import { Achievement } from '../types/game';
+
+export const INITIAL_ACHIEVEMENTS: Achievement[] = [
+  {
+    id: 'ach-first-batch',
+    title: 'First Formulation',
+    description: 'Successfully complete your very first pharmaceutical formulation batch!',
+    icon: 'Sparkles',
+    isUnlocked: false,
+    category: 'formulation',
+  },
+  {
+    id: 'ach-zero-incompat',
+    title: 'Zero Incompatibility Errors',
+    description: 'Complete an entire batch formulation with 0 incompatible excipient selections.',
+    icon: 'ShieldCheck',
+    isUnlocked: false,
+    category: 'compatibility',
+  },
+  {
+    id: 'ach-compat-master',
+    title: 'Compatibility Master',
+    description: 'Perform and analyze at least 6 distinct API-excipient compatibility tests in the Compounding Lab.',
+    icon: 'Microscope',
+    isUnlocked: false,
+    category: 'compatibility',
+  },
+  {
+    id: 'ach-precision-weighing',
+    title: 'Precision Pharmacist',
+    description: 'Weigh all selected formulation ingredients within the exact target tolerance zone.',
+    icon: 'Scale',
+    isUnlocked: false,
+    category: 'quality',
+  },
+  {
+    id: 'ach-formulation-expert',
+    title: 'Formulation Expert',
+    description: 'Earn a 3-star "Pharmacopoeial Masterpiece" rating on any formulation order.',
+    icon: 'Award',
+    isUnlocked: false,
+    category: 'mastery',
+  },
+  {
+    id: 'ach-maillard-detective',
+    title: 'Maillard Detective',
+    description: 'Correctly identify the condition-dependent interaction between lactose and amine degradation products.',
+    icon: 'Search',
+    isUnlocked: false,
+    category: 'compatibility',
+  },
+  {
+    id: 'ach-punch-perfect',
+    title: 'Rotary Press Virtuoso',
+    description: 'Compress tablets precisely within the target 12–15 kN force window without capping or sticking.',
+    icon: 'Cpu',
+    isUnlocked: false,
+    category: 'quality',
+  },
+  {
+    id: 'ach-hope-scholar',
+    title: 'HOPE Scholar',
+    description: 'Open and explore at least 5 different excipient monographs in the Knowledge Book.',
+    icon: 'BookOpen',
+    isUnlocked: false,
+    category: 'mastery',
+  },
+];
